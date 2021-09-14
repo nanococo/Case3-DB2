@@ -10,7 +10,6 @@ class dbConnections {
         .then(db => console.log('Db connected'))
         .catch(err => console.log(err));
         this.mongoose.disconnect().then(db => console.log('Desconectado')).catch();
-        
     }
 }
 
