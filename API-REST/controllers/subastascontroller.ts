@@ -2,8 +2,8 @@ import { articles_data } from '../repositories/data_articles'
 import { Logger } from '../common'
 
 
-export class ArticleController {
-    private static instance: ArticleController;
+export class SubastasController {
+    private static instance: SubastasController;
     private log: Logger;
 
     private constructor()
@@ -17,11 +17,11 @@ export class ArticleController {
         }
     }
 
-    public static getInstance() : ArticleController
+    public static getInstance() : SubastasController
     {
         if (!this.instance)
         {
-            this.instance = new ArticleController();
+            this.instance = new SubastasController();
         }
         return this.instance;
     }

@@ -1,1 +1,1 @@
-export { ArticleController } from './articlescontroller'
+export { SubastasController } from './subastascontroller'

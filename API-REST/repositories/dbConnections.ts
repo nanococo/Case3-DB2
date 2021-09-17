@@ -1,16 +1,22 @@
-import {  Mongoose } from 'mongoose';
 import {mongodbSubastas} from './keys/keys';
 
-class dbConnections {
-    private mongoose = new Mongoose();
+export class SubastasData {
+    private mongoose = require('mongoose');
+    private subastasData : SubastasData
 
+    private constructor(){
+        this.mongoose.createConnection(mongodbSubastas.URI, {maxPoolSize : 5,
+        minPoolSize : 1, connectTimeoutMS : 30000})
+        .then(console.log('Db connected'))
+        .catch((err: any) => console.log(err));
+        this.mongoose.disconnect().then(() => console.log('Desconectado')).catch();
+        
+    }
 
-    public constructor(){
-        this.mongoose.connect(mongodbSubastas.URI)
-        .then(db => console.log('Db connected'))
-        .catch(err => console.log(err));
-        this.mongoose.disconnect().then(db => console.log('Desconectado')).catch();
+    public getInstance(){
+        if (this.subastasData == null) {
+            this.subastasData = new SubastasData();
+        }
+        return this.subastasData;
     }
 }
-
-export default new dbConnections();
