@@ -1,25 +1,25 @@
 {
-    "casaSubastas" : {
-        "subastas" : [
+    "subasta" : {
+        "duenno" : {
+            "nombre" : "abc",
+            "email" : "def" 
+        },
+        "nombreArticulo": "nombre",
+        "descripcion" : "desc",
+        "tags" : ["ropa", "oferta"],
+        "precioInicial" : 100,
+        "precioActual" : 1000,
+        "fechaPublicacion" : "12/12/2021",
+        "fechaExpiracion" : "12/13/2021",
+        "activo" : false,
+        "imagen" : "URL SOIAJDASDPU",
+        "annoArticulo" : 2006,
+        "pujas" : [
             {
-                "dueño" : {
-                    "nombre" : "abc",
-                    "email" : "def" 
-                },
-                "nombreArticulo": "nombre",
-                "descripcion" : "desc",
-                "tags" : ["ropa", "oferta"],
-                "precioInicial" : 100,
-                "precioActual" : 1000,
-                "fechaPublicacion" : "12/12/2021",
-                "fechaExpiracion" : "12/13/2021",
-                "activo" : false,
-                "imagen" : "URL SOIAJDASDPU",
-                "extraInfo" : [{
-                    "nombre" : "name",
-                    "descripcion" : "es un extra",
-                    "valor" : "nada"
-                }]
+                "nombre" : "name",
+                "email" : "mail",
+                "fecha" : "12/12/2021",
+                "monto" : 1000
             }
         ]
     }
