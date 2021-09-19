@@ -26,6 +26,7 @@ export class SubastasController {
         return this.instance;
     }
 
+
     public agregarSubasta(nombreProp: String, emailProp: String, nombreArticulo: String, descripcion: String,
         tags: [String], precioInicial: Number, fechaActual: Date,fechaExpiracion: Date, 
         imagen: String, annoArticulo: Number) : Promise<any> 

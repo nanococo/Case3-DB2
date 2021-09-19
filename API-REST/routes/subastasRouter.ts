@@ -11,9 +11,10 @@ app.post("/agregar", (req, res, next) => {
         imagen, annoArticulo } = req.body;
     SubastasController.getInstance().agregarSubasta(nombreProp, emailProp, nombreArticulo, descripcion,
         tags, precioInicial, fechaActual, fechaExpiracion,
-        imagen, annoArticulo).then(()=>{res.json("Logrado")})
+        imagen, annoArticulo)
+        .then((data: any)=>{return res.json(data)})
         .catch((err: any)=>{
-            res.json(err)}
+            return res.json(err)}
         )
 })
 export { app as subastasrouter };
