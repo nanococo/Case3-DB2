@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { Logger } from '../common'
+import { Logger } from '../common/logger/logger'
 import { SubastasController } from '../controllers'
 
 const app = express();

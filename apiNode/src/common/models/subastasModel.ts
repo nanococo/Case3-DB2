@@ -1,6 +1,6 @@
 import SubastaInterface from "../interfaces/subasta";
 //import { mongo } from "mongoose";
-import mongoose from 'mongoose'
+import mongoose = require('mongoose')
 
 
 const subastasSchema = new mongoose.Schema({

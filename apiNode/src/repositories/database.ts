@@ -6,3 +6,4 @@ mongoose.connect(mongodbSubastas.URI)
 .catch((err: any)=>{
     console.log(err)
 })
+

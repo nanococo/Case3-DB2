@@ -1,31 +1,10 @@
 import subastasModel from '../common/models/subastasModel';
-import { mongodbSubastas } from './keys/keys';
-//import mongoose from 'mongoose'
-import mongoose = require('mongoose')
 
 
 export class SubastasData {
     private static instance: SubastasData
-    private connection: mongoose.Connection
     
     private constructor() {
-        //const mongoose = require('mongoose')
-        try {
-            mongoose.connect(mongodbSubastas.URI)
-            this.connection = mongoose.connection
-            console.log('db connected')
-        } catch (error) {
-            console.log("FAIL")
-            process.exit(0)
-        }
-        /*
-        mongoose.connect(mongodbSubastas.URI)
-        .then(()=>{
-            console.log("DB connected")
-        }).catch((err: any)=>{
-            console.log(err)
-        })
-        */
     }
     public static getInstance() {
         if (this.instance == null) {
@@ -51,19 +30,17 @@ export class SubastasData {
                         imagen: imagen, annoArticulo: annoArticulo, pujas: []
                     }
                 )
-                console.log("aasdasdas")
-
-                subasta.save()
+                console.log("hemos llegado")
 
                 //console.log(subasta.db)
-                /*
+                
                 subasta.save().then(() => {
                     resolve("Objeto agregado exitosamente")
                 })
                     .catch((error: any) => {
                         rejects(error.message);
                     });
-                */
+                
 
             }
         )
