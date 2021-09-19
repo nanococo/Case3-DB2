@@ -4,7 +4,6 @@ import Routes from './routes/routes'
 class App {
 
     public express: express.Application;
-    private saludos:string[];
 
     constructor() {
         this.express = express();

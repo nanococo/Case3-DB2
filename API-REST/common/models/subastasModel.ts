@@ -1,7 +1,12 @@
-const mongoose = require("mongoose") 
+import SubastaInterface from "../interfaces/subasta";
+//import { mongo } from "mongoose";
+import { Mongoose, Schema  } from 'mongoose'
 
-const subastasSchema = new mongoose.Schema({
-    subasta : {
+const mongoose: Mongoose = require('mongoose')
+
+
+const subastasSchema = new Schema({
+    propietario : {
         nombre : String,
         email: String
     },
@@ -24,5 +29,5 @@ const subastasSchema = new mongoose.Schema({
         }
     ]
 });
-
-export default mongoose.model("Subastas",subastasSchema)
+const subastasModel = mongoose.model<SubastaInterface>("Articulos",subastasSchema);
+export default subastasModel

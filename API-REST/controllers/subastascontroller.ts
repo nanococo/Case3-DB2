@@ -1,5 +1,5 @@
-import { articles_data } from '../repositories/data_articles'
 import { Logger } from '../common'
+import { SubastasData } from '../repositories/subastasData';
 
 
 export class SubastasController {
@@ -11,7 +11,7 @@ export class SubastasController {
         this.log = new Logger();
         try
         {
-        } catch (e)
+        } catch (e: any)
         {
             this.log.error(e);
         }
@@ -26,9 +26,13 @@ export class SubastasController {
         return this.instance;
     }
 
-    public listArticles() : Promise<any> 
+    public agregarSubasta(nombreProp: String, emailProp: String, nombreArticulo: String, descripcion: String,
+        tags: [String], precioInicial: Number, fechaActual: Date,fechaExpiracion: Date, 
+        imagen: String, annoArticulo: Number) : Promise<any> 
     {
-        const dynamo = new articles_data();
-        return dynamo.getAllArticles();
+        return SubastasData.getInstance().agregarSubasta(nombreProp, emailProp, nombreArticulo, descripcion,
+            tags, precioInicial, fechaActual,fechaExpiracion, 
+            imagen, annoArticulo);
+        
     }
 }
