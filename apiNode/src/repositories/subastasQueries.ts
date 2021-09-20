@@ -1,12 +1,10 @@
-
-
-
 export class Subastasqueries {
     private static instance: Subastasqueries;
 
     private constructor()
     {
 
+        
     }
 
     public static getInstance() : Subastasqueries

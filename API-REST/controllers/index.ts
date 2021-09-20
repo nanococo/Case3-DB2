@@ -1,1 +1,0 @@
-export { SubastasController } from './subastascontroller'
