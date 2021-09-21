@@ -15,6 +15,27 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.post("/puja", (req:Request, res: Response, next) => {
+    let id = req.body.id;
+    let name = req.body.name;
+    let email = req.body.email;
+    let date = req.body.date;
+    let amount = req.body.amount;
+
+    console.log(id);
+
+    SubastasController.getInstance().updatePuja(id, name, email, date, amount);
+
+    res.send({
+        'id': id,
+        'name': name,
+        'email': email,
+        'date': date,
+        'amount': amount
+    });
+});
+
+
 app.post("/agregar", (req:Request, res: Response, next) => {
     const { nombreProp, emailProp, nombreArticulo, descripcion,
         tags, precioInicial, fechaActual, fechaExpiracion,

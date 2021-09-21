@@ -40,4 +40,8 @@ export class SubastasController {
     public async getSubastas(){
         return await SubastasData.getInstance().getSubastas();
     }
+
+    public updatePuja(id: string, name: string, email: string, date: Date, amount: number) : Promise<any> {
+        return SubastasData.getInstance().updatePuja(id, name, email, date, amount);
+    }
 }
