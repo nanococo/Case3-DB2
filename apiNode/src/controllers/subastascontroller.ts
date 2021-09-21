@@ -1,5 +1,5 @@
 import { Logger } from '../common'
-import { SubastasData } from '../repositories/subastasData';
+import { SubastasData } from '../repositories';
 
 
 export class SubastasController {
@@ -28,12 +28,16 @@ export class SubastasController {
 
 
     public agregarSubasta(nombreProp: String, emailProp: String, nombreArticulo: String, descripcion: String,
-        tags: [String], precioInicial: Number, fechaActual: Date,fechaExpiracion: Date, 
-        imagen: String, annoArticulo: Number) : Promise<any> 
+                          tags: [String], precioInicial: Number, fechaActual: Date,fechaExpiracion: Date,
+                          imagen: String, annoArticulo: Number) : Promise<any>
     {
         return SubastasData.getInstance().agregarSubasta(nombreProp, emailProp, nombreArticulo, descripcion,
-            tags, precioInicial, fechaActual,fechaExpiracion, 
+            tags, precioInicial, fechaActual,fechaExpiracion,
             imagen, annoArticulo);
-        
+
+    }
+
+    public async getSubastas(){
+        return await SubastasData.getInstance().getSubastas();
     }
 }

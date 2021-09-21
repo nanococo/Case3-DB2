@@ -3,7 +3,7 @@ import subastasModel from '../common/models/subastasModel';
 
 export class SubastasData {
     private static instance: SubastasData
-    
+
     private constructor() {
     }
     public static getInstance() {
@@ -33,17 +33,27 @@ export class SubastasData {
                 console.log("hemos llegado")
 
                 //console.log(subasta.db)
-                
+
                 subasta.save().then(() => {
                     resolve("Objeto agregado exitosamente")
                 })
                     .catch((error: any) => {
                         rejects(error.message);
                     });
-                
+
 
             }
         )
-        
+
+    }
+
+    public async getSubastas() {
+        let retData;
+        await subastasModel.find().then(data => {
+            //console.log(data)
+            retData = data;
+        });
+        //console.log(retData)
+        return retData;
     }
 }

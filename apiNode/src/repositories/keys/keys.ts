@@ -1,3 +1,3 @@
 export const mongodbSubastas = {
-    URI: 'mongodb://localhost:27017/subastas'
+    URI: 'mongodb://192.168.39.199:27017/subastas'
 };
