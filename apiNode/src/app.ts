@@ -1,5 +1,6 @@
 import * as express from 'express';
 import Routes from './routes/routes'
+const path = require('path');
 
 class App {
 
@@ -9,6 +10,7 @@ class App {
         this.express = express();
         this.middleware();
         this.routes();
+        this.express.use(express.static(path.join(__dirname, "./content")));
     }
 
     // Configure Express middleware.
@@ -19,6 +21,11 @@ class App {
 
     private routes(): void {
         this.express.use('/api', Routes);
+
+
+        this.express.use('/', (req,res) => {
+            res.sendFile(path.join(__dirname, 'content/index.html'));
+        });
 
         this.express.use('*', (req,res) => {
             res.send("Request invalido");

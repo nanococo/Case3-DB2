@@ -1,15 +1,18 @@
 import App from './app';
 import * as  http from 'http'
-import { Logger } from './common/logger/logger'
+import { Logger } from './common'
+import * as express from 'express';
+import * as path from "path";
+import './repositories/database'
 
 const port = 5000;
 const logger = new Logger();
 
 App.set('port', port);
+App.use(express.static(path.join(__dirname, './content')));
+
 const server = http.createServer(App);
 server.listen(port);
-
-import './repositories/database'
 
 server.on('listening', () => {
     const addr = server.address();
