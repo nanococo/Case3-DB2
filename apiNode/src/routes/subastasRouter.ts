@@ -19,22 +19,21 @@ app.post("/puja", (req:Request, res: Response, next) => {
     let id = req.body.id;
     let name = req.body.name;
     let email = req.body.email;
-    let date = req.body.date;
     let amount = req.body.amount;
 
-    console.log(id);
-
-    SubastasController.getInstance().updatePuja(id, name, email, date, amount);
+    SubastasController.getInstance().updatePuja(id, name, email, amount);
 
     res.send({
         'id': id,
         'name': name,
         'email': email,
-        'date': date,
         'amount': amount
     });
 });
 
+app.delete("/darDeBaja", (req:Request, res: Response, next) => {
+
+});
 
 app.post("/agregar", (req:Request, res: Response, next) => {
     const { nombreProp, emailProp, nombreArticulo, descripcion,

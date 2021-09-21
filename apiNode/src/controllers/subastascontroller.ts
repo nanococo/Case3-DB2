@@ -41,7 +41,7 @@ export class SubastasController {
         return await SubastasData.getInstance().getSubastas();
     }
 
-    public updatePuja(id: string, name: string, email: string, date: Date, amount: number) : Promise<any> {
-        return SubastasData.getInstance().updatePuja(id, name, email, date, amount);
+    public updatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
+        return SubastasData.getInstance().updatePuja(id, name, email, amount);
     }
 }

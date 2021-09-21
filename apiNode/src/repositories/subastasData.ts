@@ -58,7 +58,7 @@ export class SubastasData {
         return retData;
     }
 
-    public async updatePuja(id: string, name: string, email: string, date: Date, amount: number) : Promise<any> {
+    public async updatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
         let retData;
         let o_id = new ObjectId(id);
         let doc = await subastasModel.findOne({_id: o_id})
@@ -66,25 +66,26 @@ export class SubastasData {
         if(doc){
             if(amount > doc.precioActual){
                 console.log("here");
-                retData = await SubastasData.findAndUpdatePuja(id, name, email, date, amount);
+                retData = await SubastasData.findAndUpdatePuja(id, name, email, amount);
             }
         }
         return retData;
     }
 
-    private static async findAndUpdatePuja(id: string, name: string, email: string, date: Date, amount: number) : Promise<any> {
+    private static async findAndUpdatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
         let pujaObject = {
             nombre: name,
             email: email,
-            fecha: date,
+            fecha: new Date(),
             monto: amount
         }
         let retData;
         await subastasModel.findOneAndUpdate({_id : id}, {precioActual : amount})
         await subastasModel.findOneAndUpdate({_id : id}, {$push : {pujas: pujaObject}}, {new:true}).then(data => {
+            console.log("Yay")
             retData = data;
-        });
-        console.log(retData)
+        }).catch(error => console.log(error));
+        //console.log(retData)
         return retData;
     }
 }
