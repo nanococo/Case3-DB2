@@ -22,17 +22,13 @@ app.post("/puja", (req:Request, res: Response, next) => {
     let amount = req.body.amount;
 
     SubastasController.getInstance().updatePuja(id, name, email, amount);
-
-    res.send({
-        'id': id,
-        'name': name,
-        'email': email,
-        'amount': amount
-    });
+    res.sendStatus(200);
 });
 
 app.delete("/darDeBaja", (req:Request, res: Response, next) => {
-
+    let id = req.body.id;
+    SubastasController.getInstance().disable(id)
+    res.sendStatus(200);
 });
 
 app.post("/agregar", (req:Request, res: Response, next) => {

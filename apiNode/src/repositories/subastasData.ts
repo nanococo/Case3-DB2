@@ -82,10 +82,15 @@ export class SubastasData {
         let retData;
         await subastasModel.findOneAndUpdate({_id : id}, {precioActual : amount})
         await subastasModel.findOneAndUpdate({_id : id}, {$push : {pujas: pujaObject}}, {new:true}).then(data => {
-            console.log("Yay")
+            //console.log("Yay")
             retData = data;
         }).catch(error => console.log(error));
         //console.log(retData)
         return retData;
+    }
+
+    public async disable(id: string) : Promise<any> {
+        await subastasModel.findOneAndUpdate({_id : id}, {activo : false})
+        return Promise.resolve(undefined);
     }
 }
