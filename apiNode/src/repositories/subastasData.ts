@@ -1,4 +1,5 @@
 import subastasModel from '../common/models/subastasModel';
+const ObjectId = require('mongodb').ObjectId;
 
 
 export class SubastasData {
@@ -55,5 +56,41 @@ export class SubastasData {
         });
         //console.log(retData)
         return retData;
+    }
+
+    public async updatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
+        let retData;
+        let o_id = new ObjectId(id);
+        let doc = await subastasModel.findOne({_id: o_id})
+        console.log(doc)
+        if(doc){
+            if(amount > doc.precioActual){
+                console.log("here");
+                retData = await SubastasData.findAndUpdatePuja(id, name, email, amount);
+            }
+        }
+        return retData;
+    }
+
+    private static async findAndUpdatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
+        let pujaObject = {
+            nombre: name,
+            email: email,
+            fecha: new Date(),
+            monto: amount
+        }
+        let retData;
+        await subastasModel.findOneAndUpdate({_id : id}, {precioActual : amount})
+        await subastasModel.findOneAndUpdate({_id : id}, {$push : {pujas: pujaObject}}, {new:true}).then(data => {
+            //console.log("Yay")
+            retData = data;
+        }).catch(error => console.log(error));
+        //console.log(retData)
+        return retData;
+    }
+
+    public async disable(id: string) : Promise<any> {
+        await subastasModel.findOneAndUpdate({_id : id}, {activo : false})
+        return Promise.resolve(undefined);
     }
 }

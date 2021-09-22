@@ -15,6 +15,22 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.post("/puja", (req:Request, res: Response, next) => {
+    let id = req.body.id;
+    let name = req.body.name;
+    let email = req.body.email;
+    let amount = req.body.amount;
+
+    SubastasController.getInstance().updatePuja(id, name, email, amount);
+    res.sendStatus(200);
+});
+
+app.delete("/darDeBaja", (req:Request, res: Response, next) => {
+    let id = req.body.id;
+    SubastasController.getInstance().disable(id)
+    res.sendStatus(200);
+});
+
 app.post("/agregar", (req:Request, res: Response, next) => {
     const { nombreProp, emailProp, nombreArticulo, descripcion,
         tags, precioInicial, fechaActual, fechaExpiracion,
