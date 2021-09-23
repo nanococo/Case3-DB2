@@ -57,5 +57,53 @@ app.get(
     }
 );
 
+app.get(
+    "/getbydate",(req:Request, res:Response) => {
+        const fecha = req.query["fecha"].toString();
+        //console.log(fecha)
+        const fecha1 = new Date(fecha)
+        //console.log(fecha1)
+        let a = SubastasController.getInstance().getSubastasFecha(fecha1);
+        a.then((data:any) => {
+            //console.log(data)
+            res.send(data)
+            
+            //console.log(JSON.parse(JSON.stringify(data)))
+        }).catch((err:any) =>{
+            res.send(err)
+        })
+    }
+)
+app.get(
+    "/getbyprices",(req:Request, res:Response) => {
+        const min = req.query["min"].toString();
+        const max = req.query["max"].toString();
+        
+        let a = SubastasController.getInstance().getSubastasPrecios(parseInt(min), parseInt(max));
+        a.then((data:any) => {
+            //console.log(data)
+            res.send(data)
+            
+            //console.log(JSON.parse(JSON.stringify(data)))
+        }).catch((err:any) =>{
+            res.send(err)
+        })
+    }
+)
 
+app.get(
+    "/getbyanno",(req:Request, res:Response) => {
+        const anno = req.query["anno"].toString();
+        
+        let a = SubastasController.getInstance().getSubastasAnno(parseInt(anno));
+        a.then((data:any) => {
+            //console.log(data)
+            res.send(data)
+            
+            //console.log(JSON.parse(JSON.stringify(data)))
+        }).catch((err:any) =>{
+            res.send(err)
+        })
+    }
+)
 export { app as subastasrouter };

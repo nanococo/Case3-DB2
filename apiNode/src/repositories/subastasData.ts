@@ -26,12 +26,13 @@ export class SubastasData {
                             nombre: nombreProp,
                             email: emailProp
                         }
-                        , nombreArticulo: nombreArticulo, descripcion: descripcion,
-                        tags: tags, precioInicial, precioActual: precioInicial, fechaPublicacion: fechaActual, fechaExpiracion: fechaExpiracion,
+                        , nombreArticulo: nombreArticulo, descripcion: descripcion, precioinicial: precioInicial,
+                        tags: tags, precioInicial, precioActual: precioInicial, fechaPublicacion: fechaActual, 
+                        fechaExpiracion: fechaExpiracion,activo: true,
                         imagen: imagen, annoArticulo: annoArticulo, pujas: []
                     }
                 )
-                console.log("hemos llegado")
+                //console.log("hemos llegado")
 
                 //console.log(subasta.db)
 
@@ -92,5 +93,48 @@ export class SubastasData {
     public async disable(id: string) : Promise<any> {
         await subastasModel.findOneAndUpdate({_id : id}, {activo : false})
         return Promise.resolve(undefined);
+    }
+
+    public async getSubastasFecha(fecha: Date):Promise<any> {
+        
+        return new Promise<any>((resolve, reject)=>{
+            
+        //console.log(retData)
+        
+        subastasModel.find({fechaExpiracion: fecha,activo: true}).then((data: any)=>{
+            //console.log(data)
+            resolve(data)
+        }).catch((err: any)=>{
+            reject(err)
+            })
+        })
+    }
+    public async getSubastasPrecios(min:number, max: number):Promise<any> {
+        
+        return new Promise<any>((resolve, reject)=>{
+            
+        //console.log(retData)
+        
+        subastasModel.find({precioActual: {$gte: min, $lte: max},activo: true}).then((data: any)=>{
+            //console.log(data)
+            resolve(data)
+        }).catch((err: any)=>{
+            reject(err)
+            })
+        })
+    }
+    public async getSubastasAnnos(anno:number):Promise<any> {
+        
+        return new Promise<any>((resolve, reject)=>{
+            
+        //console.log(retData)
+        
+        subastasModel.find({annoArticulo: anno,activo: true}).then((data: any)=>{
+            //console.log(data)
+            resolve(data)
+        }).catch((err: any)=>{
+            reject(err)
+            })
+        })
     }
 }

@@ -48,4 +48,17 @@ export class SubastasController {
     public disable(id: string) : Promise<any> {
         return SubastasData.getInstance().disable(id);
     }
+
+    public async getSubastasFecha(fecha: Date){
+        
+        return await SubastasData.getInstance().getSubastasFecha(fecha);
+    }
+    public async getSubastasPrecios(min:number, max:number){
+        
+        return await SubastasData.getInstance().getSubastasPrecios(min, max);
+    }
+    public async getSubastasAnno(anno:number){
+        
+        return await SubastasData.getInstance().getSubastasAnnos(anno);
+    }
 }
