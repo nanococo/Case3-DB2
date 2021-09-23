@@ -1,0 +1,24 @@
+{
+    "propietario" : {
+        "nombre" : "Toohru",
+        "email" : "thor@gmail.com"
+    },
+    "nombreArticulo": "Kobayashi",
+    "descripcion" : "She is kobayahsi",
+    "tags" : ["programmer", "girl"],
+    "precioInicial" : 100,
+    "precioActual" : 105,
+    "fechaPublicacion" : "12/12/2021",
+    "fechaExpiracion" : "12/15/2021",
+    "activo" : true,
+    "imagen" : "https://static.wikia.nocookie.net/maid-dragon/images/5/52/Kobayashi_5.png/revision/latest/scale-to-width-down/250?cb=20170315190544",
+    "annoArticulo" : 1997,
+    "pujas" : [
+        {
+            "nombre" : "Someone",
+            "email" : "someone@here.com",
+            "fecha" : "12/12/2021",
+            "monto" : 105
+        }
+    ]
+}
