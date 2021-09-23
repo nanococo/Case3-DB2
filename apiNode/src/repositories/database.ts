@@ -1,12 +1,18 @@
 import mongoose = require('mongoose')
 import { mongodbSubastas } from './keys/keys'
 
-mongoose.connect(mongodbSubastas.URI)
+mongoose.connect(mongodbSubastas.URI2)
 .then(() =>{
     console.log('connected to db')
     console.log(mongoose.connection.readyState);
 })
 .catch((err: any)=>{
-    console.log(err)
+    mongoose.connect(mongodbSubastas.URI1).then(()=>{
+        console.log('connected to db')
+        console.log(mongoose.connection.readyState);
+    }
+    ).catch((err: any)=>{
+        console.log(err)
+    })
 })
 

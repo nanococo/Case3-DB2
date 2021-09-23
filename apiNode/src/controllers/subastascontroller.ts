@@ -40,4 +40,25 @@ export class SubastasController {
     public async getSubastas(){
         return await SubastasData.getInstance().getSubastas();
     }
+
+    public updatePuja(id: string, name: string, email: string, amount: number) : Promise<any> {
+        return SubastasData.getInstance().updatePuja(id, name, email, amount);
+    }
+
+    public disable(id: string) : Promise<any> {
+        return SubastasData.getInstance().disable(id);
+    }
+
+    public async getSubastasFecha(fecha: Date){
+        
+        return await SubastasData.getInstance().getSubastasFecha(fecha);
+    }
+    public async getSubastasPrecios(min:number, max:number){
+        
+        return await SubastasData.getInstance().getSubastasPrecios(min, max);
+    }
+    public async getSubastasAnno(anno:number){
+        
+        return await SubastasData.getInstance().getSubastasAnnos(anno);
+    }
 }
