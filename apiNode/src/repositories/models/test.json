@@ -1,24 +1,241 @@
-{
-    "propietario" : {
-        "nombre" : "Toohru",
-        "email" : "thor@gmail.com"
+[
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Kobayashi",
+        "descripcion" : "A normal office worker who suddenly finds herself living with a dragon. While typically stoic and kind-hearted, she can get wild when drunk and has a particular fascination with maids. She is occasionally mistaken as a boy, due to her lack of feminine features, particularly her flat chest.",
+        "tags" : ["programmer", "girl"],
+        "precioInicial" : 300,
+        "precioActual" : 300,
+        "fechaPublicacion" : "12/09/2021",
+        "fechaExpiracion" : "12/12/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/10/317876.jpg",
+        "annoArticulo" : 1996,
+        "pujas" : []
     },
-    "nombreArticulo": "Kobayashi",
-    "descripcion" : "She is kobayahsi",
-    "tags" : ["programmer", "girl"],
-    "precioInicial" : 100,
-    "precioActual" : 105,
-    "fechaPublicacion" : "12/12/2021",
-    "fechaExpiracion" : "12/15/2021",
-    "activo" : true,
-    "imagen" : "https://static.wikia.nocookie.net/maid-dragon/images/5/52/Kobayashi_5.png/revision/latest/scale-to-width-down/250?cb=20170315190544",
-    "annoArticulo" : 1997,
-    "pujas" : [
-        {
-            "nombre" : "Someone",
-            "email" : "someone@here.com",
-            "fecha" : "12/12/2021",
-            "monto" : 105
-        }
-    ]
-}
+    {
+        "propietario" : {
+            "nombre" : "Anime List",
+            "email" : "animelist@gmail.com"
+        },
+        "nombreArticulo": "Kanna",
+        "descripcion" : "Tohru's friend from the dragon realm who got exiled from her world and winds up living with Kobayashi as well. She is very young by dragon standards and starts attending 3rd Grade in Japan in her humanized form. She initially assumes that Kobayashi seduced Tohru into staying and wanted her to return to their original world. She later grows attached to Kobayashi, viewing her as a mother figure.",
+        "tags" : ["small", "girl"],
+        "precioInicial" : 100,
+        "precioActual" : 200,
+        "fechaPublicacion" : "12/09/2021",
+        "fechaExpiracion" : "12/12/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/2/322173.jpg",
+        "annoArticulo" : 120,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 200
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Tooru",
+        "descripcion" : "A female dragon who has the ability to transform into the shape of a human girl. After her life is saved by Kobayashi, she falls in love with her and starts living in her apartment as a maid. She usually retains her horns when changing into human shape, and occasionally retains her tail. She is commonly mistaken for a cosplayer.",
+        "tags" : ["maid", "girl"],
+        "precioInicial" : 100,
+        "precioActual" : 105,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "7/11/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/11/322676.jpg",
+        "annoArticulo" : 250,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 105
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Toohru",
+        "descripcion" : "A dragon goddess and another friend of Tohru, lost her divine status centuries ago after getting drunk and causing a scandal, much like the Quetzalcoatl of the original myth. Appears in her human form as a tall, voluptuous woman.",
+        "tags" : ["mexican", "girl"],
+        "precioInicial" : 500,
+        "precioActual" : 700,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "12/10/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/16/317872.jpg",
+        "annoArticulo" : 250,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "23/12/2021",
+                "monto" : 600
+            },
+            {
+                "nombre" : "Sebas",
+                "email" : "sebas@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 700
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Elma ",
+        "descripcion" : "A female dragon belonging to the Order faction, rival to Touru's Chaos faction, who ends up working alongside Kobayashi at her office after getting stuck in the human world. She is as powerful as she is diligent and driven, but also naive and easily swayed by food due to her low income.",
+        "tags" : ["water", "dragon"],
+        "precioInicial" : 450,
+        "precioActual" : 500,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "12/11/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/2/317873.jpg",
+        "annoArticulo" : 300,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 500
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Fafnir",
+        "descripcion" : "A male dragon with a strong distrust for humans, old friend of Tohru: appears as a refined young man in his human form. He eventually comes to live in the human world with Takiya, becoming obsessed with video games.",
+        "tags" : ["demon", "male"],
+        "precioInicial" : 100,
+        "precioActual" : 200,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "12/11/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/8/317871.jpg",
+        "annoArticulo" : 1997,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 200
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Riko Saikawa",
+        "descripcion" : "Kanna's classmate in elementary school who is initially hostile towards her but soon develops a crush on her, a running gag that involves this character is that every time she and Kanna make contact, Saikawa immediately blushes with bliss.",
+        "tags" : ["schooler", "girl"],
+        "precioInicial" : 300,
+        "precioActual" : 400,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "11/11/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/4/374534.jpg",
+        "annoArticulo" : 2009,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 400
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Shouta Magatsuchi",
+        "descripcion" : "Shouta is a young boy born into a family of mages in the modern world. He is quite a shy person most of the time when being with Lucoa. When Lucoa attempts to seduce Shouta, he would run away with embarrassment and accuse Lucoa to be a demon.",
+        "tags" : ["schooler", "boy"],
+        "precioInicial" : 200,
+        "precioActual" : 250,
+        "fechaPublicacion" : "23/09/2021",
+        "fechaExpiracion" : "12/12/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/16/374535.jpg",
+        "annoArticulo" : 2008,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "23/09/2021",
+                "monto" : 250
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Makoto Takiya",
+        "descripcion" : "A programmer who is friends and works with Kobayashi. He turns into a otaku when he's at home and not working. He later becomes good friends and room mates with Fafnir.",
+        "tags" : ["programmer", "male"],
+        "precioInicial" : 250,
+        "precioActual" : 300,
+        "fechaPublicacion" : "12/09/2021",
+        "fechaExpiracion" : "12/10/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/4/317870.jpg",
+        "annoArticulo" : 1995,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 300
+            }
+        ]
+    },
+    {
+        "propietario" : {
+            "nombre" : "Toohru",
+            "email" : "thor@gmail.com"
+        },
+        "nombreArticulo": "Georgie Saikawa",
+        "descripcion" : "Saikawa's sister who pretends to be a housemaid.",
+        "tags" : ["maid", "girl"],
+        "precioInicial" : 200,
+        "precioActual" : 205,
+        "fechaPublicacion" : "12/09/2021",
+        "fechaExpiracion" : "30/11/2021",
+        "activo" : true,
+        "imagen" : "https://cdn.myanimelist.net/images/characters/14/374536.jpg",
+        "annoArticulo" : 2003,
+        "pujas" : [
+            {
+                "nombre" : "Someone",
+                "email" : "someone@here.com",
+                "fecha" : "22/09/2021",
+                "monto" : 205
+            }
+        ]
+    }   
+]
