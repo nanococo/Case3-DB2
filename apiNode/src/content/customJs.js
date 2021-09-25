@@ -46,7 +46,7 @@ function generateCards(data){
                         <div class="phone">
                             Fecha de publicación: ${release} <br>
                             Fecha de cierre: ${close} <br>
-                            Precio Inicial: ${data[i].precioInicial}
+                            Precio Inicial: ${data[i].precioinicial}
                         </div>
                     </div>
                     <div class="bottom">
