@@ -27,13 +27,13 @@ export class SubastasController {
     }
 
 
-    public agregarSubasta(nombreProp: String, emailProp: String, nombreArticulo: String, descripcion: String,
-                          tags: [String], precioInicial: Number, fechaActual: Date,fechaExpiracion: Date,
-                          imagen: String, annoArticulo: Number) : Promise<any>
+    public agregarSubasta(propietario: [any], nombreArticulo: String, descripcion: String,
+                          tags: [String], precioInicial: Number,precioActual:Number, fechaPublicacion: Date,fechaExpiracion: Date,
+                          activo:Boolean, imagen: String, annoArticulo: Number, pujas:[any]) : Promise<any>
     {
-        return SubastasData.getInstance().agregarSubasta(nombreProp, emailProp, nombreArticulo, descripcion,
-            tags, precioInicial, fechaActual,fechaExpiracion,
-            imagen, annoArticulo);
+        return SubastasData.getInstance().agregarSubasta(propietario, nombreArticulo, descripcion,
+            tags, precioInicial, precioActual, fechaPublicacion, fechaExpiracion,
+            activo, imagen, annoArticulo, pujas);
 
     }
 

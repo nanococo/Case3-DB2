@@ -14,27 +14,25 @@ export class SubastasData {
         return this.instance;
     }
 
-    public agregarSubasta(nombreProp: String, emailProp: String, nombreArticulo: String, descripcion: String,
-        tags: [String], precioInicial: Number, fechaActual: Date, fechaExpiracion: Date,
-        imagen: String, annoArticulo: Number): Promise<any> {
+    public agregarSubasta(propietario: [any], nombreArticulo: String, descripcion: String,
+        tags: [String], precioInicial: Number,precioActual:Number, fechaPublicacion: Date,fechaExpiracion: Date,
+        activo:Boolean, imagen: String, annoArticulo: Number, pujas:[any]): Promise<any> {
         return new Promise<any>(
             (resolve, rejects) => {
 
                 const subasta = new subastasModel(
                     {
-                        propietario: {
-                            nombre: nombreProp,
-                            email: emailProp
-                        }
+                        propietario: propietario
                         , nombreArticulo: nombreArticulo, descripcion: descripcion, precioinicial: precioInicial,
-                        tags: tags, precioInicial, precioActual: precioInicial, fechaPublicacion: fechaActual, 
-                        fechaExpiracion: fechaExpiracion,activo: true,
-                        imagen: imagen, annoArticulo: annoArticulo, pujas: []
+                        tags: tags, precioInicial, precioActual: precioActual, fechaPublicacion: fechaPublicacion, 
+                        fechaExpiracion: fechaExpiracion,activo: activo,
+                        imagen: imagen, annoArticulo: annoArticulo, pujas: pujas
                     }
                 )
                 //console.log("hemos llegado")
 
                 //console.log(subasta.db)
+                //console.log(subasta.$getPopulatedDocs)
 
                 subasta.save().then(() => {
                     resolve("Objeto agregado exitosamente")

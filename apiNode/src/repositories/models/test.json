@@ -35,7 +35,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 200
             }
         ]
@@ -50,7 +50,7 @@
         "tags" : ["maid", "girl"],
         "precioInicial" : 100,
         "precioActual" : 105,
-        "fechaPublicacion" : "23/09/2021",
+        "fechaPublicacion" : "09/23/2021",
         "fechaExpiracion" : "7/11/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/11/322676.jpg",
@@ -59,7 +59,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 105
             }
         ]
@@ -74,8 +74,8 @@
         "tags" : ["mexican", "girl"],
         "precioInicial" : 500,
         "precioActual" : 700,
-        "fechaPublicacion" : "23/09/2021",
-        "fechaExpiracion" : "12/10/2021",
+        "fechaPublicacion" : "09/23/2021",
+        "fechaExpiracion" : "10/12/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/16/317872.jpg",
         "annoArticulo" : 250,
@@ -83,13 +83,13 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "23/12/2021",
+                "fecha" : "12/23/2021",
                 "monto" : 600
             },
             {
                 "nombre" : "Sebas",
                 "email" : "sebas@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 700
             }
         ]
@@ -104,7 +104,7 @@
         "tags" : ["water", "dragon"],
         "precioInicial" : 450,
         "precioActual" : 500,
-        "fechaPublicacion" : "23/09/2021",
+        "fechaPublicacion" : "09/23/2021",
         "fechaExpiracion" : "12/11/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/2/317873.jpg",
@@ -113,7 +113,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 500
             }
         ]
@@ -128,7 +128,7 @@
         "tags" : ["demon", "male"],
         "precioInicial" : 100,
         "precioActual" : 200,
-        "fechaPublicacion" : "23/09/2021",
+        "fechaPublicacion" : "09/23/2021",
         "fechaExpiracion" : "12/11/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/8/317871.jpg",
@@ -137,7 +137,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 200
             }
         ]
@@ -152,7 +152,7 @@
         "tags" : ["schooler", "girl"],
         "precioInicial" : 300,
         "precioActual" : 400,
-        "fechaPublicacion" : "23/09/2021",
+        "fechaPublicacion" : "09/23/2021",
         "fechaExpiracion" : "11/11/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/4/374534.jpg",
@@ -161,7 +161,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 400
             }
         ]
@@ -176,7 +176,7 @@
         "tags" : ["schooler", "boy"],
         "precioInicial" : 200,
         "precioActual" : 250,
-        "fechaPublicacion" : "23/09/2021",
+        "fechaPublicacion" : "09/23/2021",
         "fechaExpiracion" : "12/12/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/16/374535.jpg",
@@ -185,7 +185,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "23/09/2021",
+                "fecha" : "09/23/2021",
                 "monto" : 250
             }
         ]
@@ -209,7 +209,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 300
             }
         ]
@@ -224,8 +224,8 @@
         "tags" : ["maid", "girl"],
         "precioInicial" : 200,
         "precioActual" : 205,
-        "fechaPublicacion" : "12/09/2021",
-        "fechaExpiracion" : "30/11/2021",
+        "fechaPublicacion" : "09/12/2021",
+        "fechaExpiracion" : "11/30/2021",
         "activo" : true,
         "imagen" : "https://cdn.myanimelist.net/images/characters/14/374536.jpg",
         "annoArticulo" : 2003,
@@ -233,7 +233,7 @@
             {
                 "nombre" : "Someone",
                 "email" : "someone@here.com",
-                "fecha" : "22/09/2021",
+                "fecha" : "09/22/2021",
                 "monto" : 205
             }
         ]

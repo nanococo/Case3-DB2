@@ -32,12 +32,12 @@ app.delete("/darDeBaja", (req:Request, res: Response, next) => {
 });
 
 app.post("/agregar", (req:Request, res: Response, next) => {
-    const { nombreProp, emailProp, nombreArticulo, descripcion,
-        tags, precioInicial, fechaActual, fechaExpiracion,
-        imagen, annoArticulo } = req.body;
-    SubastasController.getInstance().agregarSubasta(nombreProp, emailProp, nombreArticulo, descripcion,
-        tags, precioInicial, fechaActual, fechaExpiracion,
-        imagen, annoArticulo).then((msg: any)=>{
+    const { propietario, nombreArticulo, descripcion,
+        tags, precioInicial, precioActual, fechaPublicacion, fechaExpiracion,
+        activo, imagen, annoArticulo, pujas } = req.body;
+    SubastasController.getInstance().agregarSubasta(propietario, nombreArticulo, descripcion,
+        tags, precioInicial, precioActual, fechaPublicacion, fechaExpiracion,
+        activo, imagen, annoArticulo, pujas).then((msg: any)=>{
         res.json(msg)
     }).catch((err: any)=>{
         res.json(err)
